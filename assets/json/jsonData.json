@@ -1,0 +1,54 @@
+final jsonData = {
+  "page": {
+    "components": [
+      {
+        "type": "banner",
+        "image": "https://picsum.photos/800/300",
+        "height": 180,
+        "padding": 16,
+        "radius": 12
+      },
+      {
+        "type": "carousel",
+        "images": [
+          "https://picsum.photos/800/300?1",
+          "https://picsum.photos/800/300?2",
+          "https://picsum.photos/800/300?3"
+        ],
+        "height": 200,
+        "autoPlay": true,
+        "padding": 12,
+        "spacing": 8
+      },
+      {
+        "type": "text",
+        "value": "Welcome to AppDrop - dynamically rendered UI",
+        "size": 18,
+        "weight": "bold",
+        "align": "center",
+        "padding": 16
+      },
+      {
+        "type": "grid",
+        "images": [
+          "https://picsum.photos/200/200?1",
+          "https://picsum.photos/200/200?2",
+          "https://picsum.photos/200/200?3",
+          "https://picsum.photos/200/200?4"
+        ],
+        "columns": 2,
+        "spacing": 8,
+        "padding": 16
+      },
+      {
+        "type": "video",
+        "url":
+            "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+        "autoPlay": false,
+        "loop": false,
+        "height": 220,
+        "padding": 12
+      }
+    ]
+  }
+};
