@@ -1,16 +1,29 @@
-# appdrop
+# AppDrop — Dynamic Widget Rendering Engine (Flutter)
 
-A new Flutter project.
+This project implements a mini widget rendering engine that converts a JSON schema into a Flutter UI at runtime.
 
-## Getting Started
+## Project structure
+- `lib/core/models/` — JSON models (page, component)
+- `lib/core/widget_factory/` — maps component `type` -> widget
+- `lib/components/` — implementations for banner, carousel, grid, video, text
+- `lib/screens/` — main screen
+- `lib/main.dart` — bootstrap + sample JSON
 
-This project is a starting point for a Flutter application.
+## Supported component types
+- `banner` — image banner (height, padding, radius)
+- `carousel` — image carousel (images, height, autoPlay, spacing)
+- `grid` — image grid (images, columns, spacing, padding)
+- `video` — video player (url, autoPlay, loop, height, padding)
+- `text` — text block (value, size, weight, align, padding)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How JSON maps to UI
+The JSON structure:
+```json
+{
+  "page": {
+    "components": [
+      { "type": "banner", "image": "...", ... },
+      { "type": "carousel", "images": [...], ... }
+    ]
+  }
+}
